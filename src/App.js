@@ -77,7 +77,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>BMI Calculator</h2>
+          <h2>BMI Calculator - Linux</h2>
         </div>
           <form onSubmit={this.submitMe}>
             <label>
