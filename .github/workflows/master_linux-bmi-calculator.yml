@@ -60,4 +60,4 @@ jobs:
           app-name: 'linux-bmi-calculator'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_23F6A0AEE4A5464DA9DD0CB88FA41C23 }}
-          package: release.zip
+          package: $(Build.ArtifactStagingDirectory)/release.zip
