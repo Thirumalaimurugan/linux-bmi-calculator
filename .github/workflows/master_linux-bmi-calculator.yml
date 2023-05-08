@@ -32,7 +32,7 @@ jobs:
         with:
           filename: release.zip
           # Base path for archive files
-          path: ./build/**/*
+          path: ./build/
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -61,4 +61,4 @@ jobs:
           app-name: 'linux-bmi-calculator'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_23F6A0AEE4A5464DA9DD0CB88FA41C23 }}
-          package: ${{ github.workspace }}/**/*
+          package: release.zip
