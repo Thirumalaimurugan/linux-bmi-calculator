@@ -28,11 +28,7 @@ jobs:
           npm run test --if-present
           
       - name: Zip Release
-        uses: TheDoctor0/zip-release@0.7.1
-        with:
-          filename: release.zip
-          # Base path for archive files
-          path: ./build/
+        run: zip -r release.zip build/
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
